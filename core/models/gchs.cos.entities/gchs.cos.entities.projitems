@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>cd312381-67c1-40c9-a52b-3a5f7413052d</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>gchs.cos.entities</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)common\ContactInfoType.cs" />
+    <Compile Include="..\..\..\models\gchs.cos.entities\common\ContactInfoTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)crm\Address.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BaseEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)crm\Name.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NamedEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)crm\Person.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\PostalCodes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\State.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)crm\" />
+  </ItemGroup>
+</Project>
